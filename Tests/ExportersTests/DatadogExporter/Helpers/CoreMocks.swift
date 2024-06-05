@@ -5,6 +5,7 @@
 
 @testable import DatadogExporter
 import Foundation
+import FoundationNetworking
 
 // MARK: - PerformancePreset Mocks
 

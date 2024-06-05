@@ -6,6 +6,7 @@
 @testable import DatadogExporter
 import Foundation
 import XCTest
+import FoundationNetworking
 
 private let ddURLSessionUUIDHeaderField = "dd-urlsession-uuid"
 
