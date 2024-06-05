@@ -19,6 +19,8 @@ public class DeviceDataSource: IDeviceDataSource {
     public var model: String? {
         #if os(watchOS)
             return WKInterfaceDevice.current().localizedModel
+        #elseif os(Linux)
+            return nil
         #else
             let hwName = UnsafeMutablePointer<Int32>.allocate(capacity: 2)
             hwName[0] = CTL_HW
@@ -57,6 +59,8 @@ public class DeviceDataSource: IDeviceDataSource {
             } else {
                 return nil
             }
+        #elseif os(Linux)
+            return nil
         #elseif os(macOS)
             return nil
         #else

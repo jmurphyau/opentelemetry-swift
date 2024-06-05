@@ -29,6 +29,8 @@ public class OperatingSystemDataSource: IOperatingSystemDataSource {
             return "watchOS"
         #elseif os(macOS)
             return "macOS"
+        #elseif os(Linux)
+            return "Linux"
         #else
             return UIDevice.current.systemName
         #endif
