@@ -4,6 +4,7 @@
  */
 
 import Foundation
+import FoundationNetworking
 import OpenTelemetryApi
 import OpenTelemetrySdk
 import StdoutExporter
