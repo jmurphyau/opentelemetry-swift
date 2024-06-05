@@ -4,6 +4,7 @@
  */
 
 import Foundation
+import FoundationNetworking
 
 /*
  A collection of mocks for different `Foundation` types. The convention we use is to extend

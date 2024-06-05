@@ -6,6 +6,7 @@
 import Foundation
 import OpenTelemetryApi
 import OpenTelemetrySdk
+import FoundationNetworking
 
 #if os(iOS) && !targetEnvironment(macCatalyst)
     import os.log

@@ -5,6 +5,7 @@
 
 @testable import DatadogExporter
 import XCTest
+import FoundationNetworking
 
 class HTTPClientTests: XCTestCase {
     func testWhenRequestIsDelivered_itReturnsHTTPResponse() {

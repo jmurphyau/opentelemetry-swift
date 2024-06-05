@@ -5,6 +5,7 @@
 
 @testable import DatadogExporter
 import XCTest
+import FoundationNetworking
 
 extension DataUploadStatus: EquatableInTests {}
 
