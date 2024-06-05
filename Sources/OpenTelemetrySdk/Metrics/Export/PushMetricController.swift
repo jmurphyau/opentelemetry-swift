@@ -16,7 +16,7 @@ class PushMetricController {
         self.meterSharedState = meterSharedState
         metricPushTimer = DispatchSource.makeTimerSource(flags: DispatchSource.TimerFlags(), queue: pushMetricQueue)
         metricPushTimer.setEventHandler { [weak self] in
-            autoreleasepool {
+            
                 guard let self = self,
                       let meterProvider = self.meterProvider else {
                     return
@@ -33,7 +33,7 @@ class PushMetricController {
                 let metricToExport = self.meterSharedState.metricProcessor.finishCollectionCycle()
 
                 _ = meterSharedState.metricExporter.export(metrics: metricToExport, shouldCancel: shouldCancel)
-            }
+
         }
 
         metricPushTimer.schedule(deadline: .now() + meterSharedState.metricPushInterval, repeating: meterSharedState.metricPushInterval)

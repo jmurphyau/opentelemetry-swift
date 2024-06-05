@@ -100,7 +100,7 @@ private class BatchWorker: Thread {
   
   override func main() {
     repeat {
-      autoreleasepool {
+
         var spansCopy: [ReadableSpan]
         cond.lock()
         if spanList.count < maxExportBatchSize {
@@ -112,7 +112,7 @@ private class BatchWorker: Thread {
         spanList.removeAll()
         cond.unlock()
         self.exportBatch(spanList: spansCopy, explicitTimeout: self.exportTimeout)
-      }
+      
     } while true
   }
   

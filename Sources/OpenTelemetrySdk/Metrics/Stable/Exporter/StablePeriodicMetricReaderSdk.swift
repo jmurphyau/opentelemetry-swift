@@ -22,12 +22,12 @@ public class StablePeriodicMetricReaderSdk : StableMetricReader {
         scheduleTimer = DispatchSource.makeTimerSource(flags: DispatchSource.TimerFlags(), queue: scheduleQueue)
         
         scheduleTimer.setEventHandler { [weak self] in
-            autoreleasepool {
+
                 guard let self = self else {
                     return
                 }
                 _ = self.doRun()
-            }
+            
         }
     }
     
