@@ -9,7 +9,9 @@ import Foundation
 #elseif os(macOS)
     import AppKit
 #else
+#if os(iOS)
     import UIKit
+#endif
 #endif
 public class DeviceDataSource: IDeviceDataSource {
     public init() {}

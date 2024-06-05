@@ -6,7 +6,9 @@
     import WatchKit
 #elseif os(macOS)
 #else
+#if os(iOS)
     import UIKit
+#endif
 #endif
 
 import Foundation
