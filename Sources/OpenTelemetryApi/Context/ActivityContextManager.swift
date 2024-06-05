@@ -87,6 +87,7 @@ class ActivityContextManager: ContextManager {
 }
 #else
 class ActivityContextManager: ContextManager {
+    static let instance = ActivityContextManager()
     func getCurrentContextValue(forKey: OpenTelemetryContextKeys) -> AnyObject? {
         return nil
     }
