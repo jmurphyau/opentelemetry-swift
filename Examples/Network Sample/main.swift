@@ -4,7 +4,9 @@
  */
 
 import Foundation
-import FoundationNetworking
+#if canImport(FoundationNetworking)
+    import FoundationNetworking
+#endif
 import OpenTelemetryApi
 import OpenTelemetrySdk
 import StdoutExporter

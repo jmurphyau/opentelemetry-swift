@@ -4,7 +4,9 @@
  */
 
 import Foundation
-import FoundationNetworking
+#if canImport(FoundationNetworking)
+    import FoundationNetworking
+#endif
 
 /*
  A collection of mocks for different `Foundation` types. The convention we use is to extend

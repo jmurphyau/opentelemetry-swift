@@ -7,7 +7,9 @@ import Foundation
 import OpenTelemetrySdk
 @testable import PrometheusExporter
 import XCTest
-import FoundationNetworking
+#if canImport(FoundationNetworking)
+    import FoundationNetworking
+#endif
 
 class PrometheusExporterTests: XCTestCase {
     let metricPushIntervalSec = 0.05

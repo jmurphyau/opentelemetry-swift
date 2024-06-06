@@ -6,7 +6,9 @@
 @testable import DatadogExporter
 import XCTest
 import Foundation
-import FoundationNetworking
+#if canImport(FoundationNetworking)
+    import FoundationNetworking
+#endif
 
 class DataUploadWorkerTests: XCTestCase {
     private let temporaryDirectory = obtainUniqueTemporaryDirectory()

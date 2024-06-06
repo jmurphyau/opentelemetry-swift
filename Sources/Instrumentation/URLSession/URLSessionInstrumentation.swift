@@ -6,7 +6,9 @@
 import Foundation
 import OpenTelemetryApi
 import OpenTelemetrySdk
-import FoundationNetworking
+#if canImport(FoundationNetworking)
+    import FoundationNetworking
+#endif
 
 struct NetworkRequestState {
     var request: URLRequest?

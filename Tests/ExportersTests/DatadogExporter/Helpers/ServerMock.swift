@@ -6,7 +6,9 @@
 @testable import DatadogExporter
 import Foundation
 import XCTest
-import FoundationNetworking
+#if canImport(FoundationNetworking)
+    import FoundationNetworking
+#endif
 
 private let ddURLSessionUUIDHeaderField = "dd-urlsession-uuid"
 

@@ -7,7 +7,10 @@
 @testable import OpenTelemetrySdk
 @testable import URLSessionInstrumentation
 import XCTest
-import FoundationNetworking
+import Foundation
+#if canImport(FoundationNetworking)
+    import FoundationNetworking
+#endif
 
 class URLSessionInstrumentationTests: XCTestCase {
     class Check {
